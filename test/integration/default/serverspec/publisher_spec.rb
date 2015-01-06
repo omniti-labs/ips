@@ -13,9 +13,9 @@ describe 'The ips_publisher resource' do
 
   context 'when the action is :delete' do
 
-    it 'should be a known publisher' do
+    it 'should not appear on the list of publishers' do
       cmd = command("pkg publisher #{fixtures[:deleted]}")
-      expect(cmd.exit_status).to be(0)
+      expect(cmd.exit_status).to be(1)
     end
 
     it 'should not appear in the list of enabled publishers' do
