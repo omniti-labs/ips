@@ -5,7 +5,7 @@ set :backend, :exec
 
 # See recipes/test_publisher
 fixtures = {
-  :deleted => 'ms.omniti.com',
+  :deleted => 'omnios',
   :created => 'perl.omniti.com',
 }
 
