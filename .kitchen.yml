@@ -10,11 +10,13 @@ provisioner:
 platforms:
   - name: omnios-008
     driver:
-      box: omnios-r151008j-r1
+      box: omnios-r151008t
+      bor_url: http://omnios.omniti.com/media/omnios-r151008t.box
 
   - name: omnios-012
     driver:
       box: omnios-r151012
+      box_url: http://omnios.omniti.com/media/omnios-r151012.box
 
 suites:
   - name: default
