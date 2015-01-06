@@ -1,4 +1,6 @@
 
+include_recipe 'ips::grant_sudo_to_root'
+
 # You can get a list of well-known publishers here:
 # http://omnios.omniti.com/wiki.php/Packaging
 
