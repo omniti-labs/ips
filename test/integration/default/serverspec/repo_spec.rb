@@ -4,7 +4,7 @@ require 'serverspec'
 set :backend, :exec
 
 # See recipes/test_depot
-describe 'The ips_depot resource' do
+describe 'The ips_repo resource' do
 
   context 'when the action is :create' do
     it 'should create a directory' do
