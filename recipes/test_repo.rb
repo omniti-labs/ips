@@ -19,6 +19,7 @@ ips_repo 'test-repo-enabled2' do
   path '/data/test-repo-enabled2'
   action :enable_depot
   port 10002
+  readonly false
   default_publisher 'fancy-software'
 end
 

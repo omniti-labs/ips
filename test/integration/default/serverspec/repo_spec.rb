@@ -11,7 +11,10 @@ describe 'The ips_repo resource' do
       expect(file('/data/test-repo-created')).to be_directory
     end
     it 'should have the correct default publisher' do
-      expect(command('pkgrepo get -Hs /data/test-repo-created -p publisher/prefix')).to match(/fancy-software/)
+      expect(command('pkgrepo get -Hs /data/test-repo-created publisher/prefix').stdout).to match(/fancy-software/)
+    end
+    it 'should have the correct name' do
+      expect(command('pkgrepo get -Hs /data/test-repo-created repository/name').stdout).to match(/test-repo-created/)
     end
   end
 
