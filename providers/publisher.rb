@@ -37,7 +37,7 @@ action :create do
 end
 
 action :delete do
-  execute "pkg unset-publisher -g #{new_resource.url} #{new_resource.publisher}" do
-    not_if "pkg publisher #{new_resource.publisher}"
+  execute "pkg unset-publisher #{new_resource.publisher}" do
+    only_if "pkg publisher #{new_resource.publisher}"
   end
 end
