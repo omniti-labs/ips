@@ -1,0 +1,26 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  # Patched omnibus installer - nothing unique to IPS, just has omnitruck PR #72 installed
+  chef_omnibus_url: https://svn.omniti.com/chef-install/install.sh
+
+platforms:
+  - name: omnios-008
+    driver:
+      box: omnios-r151008t
+      bor_url: http://omnios.omniti.com/media/omnios-r151008t.box
+
+  - name: omnios-012
+    driver:
+      box: omnios-r151012
+      box_url: http://omnios.omniti.com/media/omnios-r151012.box
+
+suites:
+  - name: default
+    run_list:
+      - recipe[ips::test_publisher]
+      - recipe[ips::test_repo]
+    attributes:
