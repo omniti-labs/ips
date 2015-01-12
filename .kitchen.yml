@@ -22,4 +22,5 @@ suites:
   - name: default
     run_list:
       - recipe[ips::test_publisher]
+      - recipe[ips::test_repo]
     attributes:
